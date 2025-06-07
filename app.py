@@ -28,11 +28,11 @@ async def search():
         for r in islice(ddgs_gen, max_results):
             results.append(r)
     # 返回一个json响应，包含搜索结果，并确保使用UTF-8编码
-    response = jsonify({'results': results})
-    response.headers['Content-Type'] = 'application/json; charset=utf-8'
+    # response = jsonify({'results': results})
+    # response.headers['Content-Type'] = 'application/json; charset=utf-8'
 
     # 返回一个json响应，包含搜索结果
-    return response # {'results': results}
+    return {'results': results}
 
 
 @app.route('/searchAnswers', methods=['GET', 'POST'])
