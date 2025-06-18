@@ -7,6 +7,7 @@ import json
 
 
 app = Flask(__name__)
+app.config['JSON_AS_ASCII'] = False  # 关闭默认的 ASCII 转义
 
 
 def run():
